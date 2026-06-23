@@ -8,6 +8,6 @@ package sge.model;
  *
  * @author guest.jb
  */
-public class aluno {
+public class Aluno {
     
 }

@@ -39,6 +39,11 @@ public class TelaLogin extends javax.swing.JFrame {
         lblSenha.setText("Senha");
 
         btnLogin.setText("Login");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -83,6 +88,23 @@ public class TelaLogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+    switch(u.getPerfil()) {
+        case "Diretor":
+            new TelaDiretor(u).setVisible(true);
+            break;
+        case "Professor":
+            new TelaProfessor(u).setVisible(true);
+            break;
+        case "Aluno":
+            new TelaAlunos(u).setVisible(true);
+            break;
+        default:
+            JOptionPane.showMessageDialog(this, "Perfil não reconhecido");
+    }
+    this.dispose();
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments

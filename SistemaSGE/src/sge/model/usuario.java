@@ -8,6 +8,11 @@ package sge.model;
  *
  * @author guest.jb
  */
-public class usuario {
+public class Usuario {
+    private int id;
+    private String nome;
+    private String login;
+    private String perfil;
+    
     
 }
