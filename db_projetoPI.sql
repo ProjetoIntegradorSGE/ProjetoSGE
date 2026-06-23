@@ -5,10 +5,8 @@ USE projeto_PI;
 CREATE TABLE usuarios (
     id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
-    login VARCHAR (90) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL,
     perfil VARCHAR (100)
-    
 );
 
 CREATE TABLE turmas (
@@ -40,4 +38,6 @@ CREATE TABLE professor (
 
 INSERT INTO usuarios(nome,senha) 
 VALUES
-("adm", "adm123");
+("Diretor", "Diretor123"),
+("Professor","Professor123"),
+("Aluno","Aluno123")
