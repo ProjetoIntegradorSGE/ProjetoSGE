@@ -23,34 +23,51 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="370" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="btnAlunos" max="32767" attributes="0"/>
-                  <Component id="btnDiretor" pref="130" max="32767" attributes="0"/>
-                  <Component id="btnProfessor" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace pref="239" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="lblUsuario" pref="75" max="32767" attributes="0"/>
+                          <Component id="lblSenha" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="txtSenha" pref="213" max="32767" attributes="0"/>
+                          <Component id="txtUsuario" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="274" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="btnLogin" min="-2" pref="119" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="320" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="lblTitulo" min="-2" pref="389" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="201" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="241" max="32767" attributes="0"/>
-              <Component id="lblTitulo" min="-2" pref="421" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="167" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-              <Component id="lblTitulo" min="-2" pref="83" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
+              <Component id="lblTitulo" min="-2" pref="58" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="btnDiretor" min="-2" pref="61" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsuario" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnProfessor" min="-2" pref="61" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnAlunos" min="-2" pref="61" max="-2" attributes="0"/>
-              <EmptySpace pref="147" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblSenha" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="btnLogin" min="-2" pref="22" max="-2" attributes="0"/>
+              <EmptySpace pref="205" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -64,29 +81,24 @@
         <Property name="text" type="java.lang.String" value="Acesso ao Sistema Escola"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnDiretor">
+    <Component class="javax.swing.JLabel" name="lblUsuario">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Diretor Geral"/>
+        <Property name="text" type="java.lang.String" value="Usu&#xe1;rio"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDiretorActionPerformed"/>
-      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnProfessor">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Professor"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnProfessorActionPerformed"/>
-      </Events>
+    <Component class="javax.swing.JTextField" name="txtUsuario">
     </Component>
-    <Component class="javax.swing.JButton" name="btnAlunos">
+    <Component class="javax.swing.JLabel" name="lblSenha">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Alunos"/>
+        <Property name="text" type="java.lang.String" value="Senha"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAlunosActionPerformed"/>
-      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtSenha">
+    </Component>
+    <Component class="javax.swing.JButton" name="btnLogin">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Login"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
