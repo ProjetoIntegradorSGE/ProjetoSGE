@@ -28,8 +28,8 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-              <Component id="btnVM" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="574" max="32767" attributes="0"/>
+              <Component id="btnV" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="613" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -37,19 +37,19 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace pref="457" max="32767" attributes="0"/>
-              <Component id="btnVM" min="-2" max="-2" attributes="0"/>
+              <Component id="btnV" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="btnVM">
+    <Component class="javax.swing.JButton" name="btnV">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Voltar ao menu"/>
+        <Property name="text" type="java.lang.String" value="Voltar "/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVMActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
