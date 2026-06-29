@@ -2,6 +2,7 @@ package sge.view;
 
 import sge.model.usuario;
 import sge.dao.UsuarioDAO;
+import javax.swing.JOptionPane; 
 
 public class TelaLogin extends javax.swing.JFrame {
 

@@ -6,7 +6,7 @@ import java.sql.*;
 
 public class UsuarioDAO {
     public usuario autenticar(String login, String senha) {
-        String sql = "SELECT * FROM usuarios WHERE login = ? AND senha = ?";
+        String sql = "SELECT * FROM usuarios WHERE nome = ? AND senha = ?";
         try (Connection conn = conexao.conectar();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
@@ -18,7 +18,7 @@ public class UsuarioDAO {
                 return new usuario(
                     rs.getInt("id_usuario"),
                     rs.getString("nome"),
-                    rs.getString("login"),
+                    rs.getString("nome"),
                     rs.getString("perfil")
                 );
             }
