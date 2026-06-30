@@ -4,7 +4,6 @@ USE projeto_PI;
 
 CREATE TABLE usuarios (
     id_usuario INT AUTO_INCREMENT PRIMARY KEY,
-    login VARCHAR(100) NOT NULL UNIQUE,
     nome VARCHAR(100) NOT NULL,
     senha VARCHAR(255) NOT NULL,
     perfil VARCHAR (100)
@@ -37,8 +36,15 @@ CREATE TABLE professor (
     senha VARCHAR(100)
 );
 
-INSERT INTO usuarios(nome,login,senha,perfil) 
+INSERT INTO usuarios(nome,senha) 
 VALUES
-("Diretor Geral","diretor", "Diretor123","Diretor"),
-("Professor Padrão","professor","Professor123","Professor"),
-("Aluno Padrão","aluno","Aluno123","Aluno");
+("Diretor", "Diretor123"),
+("Professor","Professor123"),
+("Aluno","Aluno123");
+
+select * from usuarios;
+
+SET SQL_SAFE_UPDATES = 0;
+UPDATE usuarios SET perfil = 'Diretor' WHERE nome = 'Diretor';
+UPDATE usuarios SET perfil = 'Professor' WHERE nome = 'Professor';
+UPDATE usuarios SET perfil = 'Aluno' WHERE nome = 'Aluno';
