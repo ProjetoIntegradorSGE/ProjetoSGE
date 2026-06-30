@@ -3,9 +3,12 @@ package sge.view;
 
 import sge.model.usuario;
 
-public class TelaDiretor extends javax.swing.JFrame {
 
+public class TelaDiretor extends javax.swing.JFrame {
+    private usuario usuarioLogado;
+    
     public TelaDiretor(usuario u) {
+        this.usuarioLogado = u;
         initComponents();
     }
 
@@ -38,6 +41,11 @@ public class TelaDiretor extends javax.swing.JFrame {
         btnUsuarios.setText("Gestão de usuários");
 
         btnTurmas.setText("Gestão de turmas");
+        btnTurmas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTurmasActionPerformed(evt);
+            }
+        });
 
         btnAlunos.setText("Gestão de aluno");
 
@@ -99,6 +107,12 @@ public class TelaDiretor extends javax.swing.JFrame {
     private void btnRelatoriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRelatoriosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRelatoriosActionPerformed
+
+    private void btnTurmasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTurmasActionPerformed
+            new TelaTurmas(usuarioLogado).setVisible(true);
+            this.dispose();
+        ;
+    }//GEN-LAST:event_btnTurmasActionPerformed
 
     /**
      * @param args the command line arguments

@@ -1,11 +1,16 @@
 package sge.view;
 
+import sge.dao.TurmaDAO;
+import sge.model.turma;
+import java.util.List;
 
 public class TelaTurmas extends javax.swing.JFrame {
+    private sge.model.usuario usuarioLogado;
 
-
-    public TelaTurmas() {
+    public TelaTurmas(sge.model.usuario u) {
+        this.usuarioLogado = u;
         initComponents();
+        carregarTabela();
     }
 
 private void carregarTabela() {
@@ -34,8 +39,18 @@ private void carregarTabela() {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnSalvar.setText("Salvar");
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarActionPerformed(evt);
+            }
+        });
 
         btnExcluir.setText("Excluir");
+        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirActionPerformed(evt);
+            }
+        });
 
         tblTurmas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -51,6 +66,11 @@ private void carregarTabela() {
         jScrollPane1.setViewportView(tblTurmas);
 
         btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -88,13 +108,51 @@ private void carregarTabela() {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+            btnSalvar.addActionListener(e -> {
+            String nome = txtNomeTurma.getText().trim();
+            if (nome.isEmpty()) {
+                javax.swing.JOptionPane.showMessageDialog(this, "Digite o nome da turma!");
+                return;
+            }
+            turma t = new turma(0, nome);
+            new TurmaDAO().salvar(t);
+            txtNomeTurma.setText("");
+            carregarTabela();
+        });
+    }//GEN-LAST:event_btnSalvarActionPerformed
+
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+            btnExcluir.addActionListener(e -> {
+            int linha = tblTurmas.getSelectedRow();
+            if (linha == -1) {
+                javax.swing.JOptionPane.showMessageDialog(this, "Selecione uma turma!");
+                return;
+            }
+            int id = (int) tblTurmas.getValueAt(linha, 0);
+            new TurmaDAO().excluir(id);
+            carregarTabela();
+        });
+
+        btnVoltar.addActionListener(e -> {
+            new TelaDiretor(usuarioLogado).setVisible(true);
+            this.dispose();
+        });
+    }//GEN-LAST:event_btnExcluirActionPerformed
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+            new TelaDiretor(usuarioLogado).setVisible(true);
+            this.dispose();
+        ;
+    }//GEN-LAST:event_btnVoltarActionPerformed
+
 
     public static void main(String args[]) {
 
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaTurmas().setVisible(true);
+            new TelaTurmas(null).setVisible(true);
             }
         });
     }
