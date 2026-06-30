@@ -27,29 +27,85 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-              <Component id="btnV" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="609" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="188" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="btnLogout" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnUsuarios" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblDiretor" min="-2" pref="325" max="-2" attributes="0"/>
+                  <Component id="btnTurmas" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAlunos" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnNotas" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnRelatorios" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="187" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="459" max="32767" attributes="0"/>
-              <Component id="btnV" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+              <Component id="lblDiretor" min="-2" pref="76" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnUsuarios" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnTurmas" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnAlunos" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnNotas" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnRelatorios" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnLogout" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="167" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="btnV">
+    <Component class="javax.swing.JButton" name="btnLogout">
       <Properties>
         <Property name="text" type="java.lang.String" value="Voltar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLogoutActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblDiretor">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="36" style="3"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Painel do Diretor"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnUsuarios">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Gest&#xe3;o de usu&#xe1;rios"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnTurmas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Gest&#xe3;o de turmas"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnAlunos">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Gest&#xe3;o de aluno"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnNotas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Lan&#xe7;amento de notas"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnRelatorios">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Relat&#xf3;rios"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRelatoriosActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
