@@ -35,10 +35,15 @@ public class TelaDiretor extends javax.swing.JFrame {
             }
         });
 
-        lblDiretor.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
+        lblDiretor.setFont(new java.awt.Font("Sitka Display", 3, 36)); // NOI18N
         lblDiretor.setText("Painel do Diretor");
 
         btnUsuarios.setText("Gestão de usuários");
+        btnUsuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUsuariosActionPerformed(evt);
+            }
+        });
 
         btnTurmas.setText("Gestão de turmas");
         btnTurmas.addActionListener(new java.awt.event.ActionListener() {
@@ -50,6 +55,11 @@ public class TelaDiretor extends javax.swing.JFrame {
         btnAlunos.setText("Gestão de aluno");
 
         btnNotas.setText("Lançamento de notas");
+        btnNotas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNotasActionPerformed(evt);
+            }
+        });
 
         btnRelatorios.setText("Relatórios");
         btnRelatorios.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +73,7 @@ public class TelaDiretor extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(188, 188, 188)
+                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnLogout)
                     .addComponent(btnUsuarios)
@@ -72,16 +82,16 @@ public class TelaDiretor extends javax.swing.JFrame {
                     .addComponent(btnAlunos)
                     .addComponent(btnNotas)
                     .addComponent(btnRelatorios))
-                .addContainerGap(187, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(lblDiretor, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnUsuarios)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnTurmas)
                 .addGap(18, 18, 18)
                 .addComponent(btnAlunos)
@@ -91,7 +101,7 @@ public class TelaDiretor extends javax.swing.JFrame {
                 .addComponent(btnRelatorios)
                 .addGap(18, 18, 18)
                 .addComponent(btnLogout)
-                .addContainerGap(167, Short.MAX_VALUE))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
 
         pack();
@@ -113,6 +123,16 @@ public class TelaDiretor extends javax.swing.JFrame {
             this.dispose();
         ;
     }//GEN-LAST:event_btnTurmasActionPerformed
+
+    private void btnNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNotasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNotasActionPerformed
+
+    private void btnUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuariosActionPerformed
+        new TelaUsuarios().setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnUsuariosActionPerformed
 
     /**
      * @param args the command line arguments
