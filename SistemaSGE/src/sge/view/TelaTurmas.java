@@ -39,6 +39,12 @@ private void carregarTabela() {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        txtNomeTurma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeTurmaActionPerformed(evt);
+            }
+        });
+
         btnSalvar.setText("Salvar");
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,8 +158,12 @@ private void carregarTabela() {
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
             new TelaDiretor(usuarioLogado).setVisible(true);
             this.dispose();
-        ;
+ 
     }//GEN-LAST:event_btnVoltarActionPerformed
+
+    private void txtNomeTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeTurmaActionPerformed
+
+    }//GEN-LAST:event_txtNomeTurmaActionPerformed
 
 
     public static void main(String args[]) {
