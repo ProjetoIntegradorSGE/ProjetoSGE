@@ -1,6 +1,7 @@
 package sge.view;
 
 public class TelaUsuarios extends javax.swing.JFrame {
+    private sge.model.usuario usuarioLogado;
 
     public TelaUsuarios() {
         initComponents();
@@ -22,6 +23,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
         lblUsuarios = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        btnVoltar = new javax.swing.JButton();
 
         jTextField1.setText("jTextField1");
 
@@ -56,6 +58,13 @@ public class TelaUsuarios extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel5.setText("Exclusão");
 
+        btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -83,6 +92,10 @@ public class TelaUsuarios extends javax.swing.JFrame {
                             .addComponent(btn_Deletar)
                             .addComponent(txt_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(49, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnVoltar)
+                .addGap(27, 27, 27))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,7 +122,9 @@ public class TelaUsuarios extends javax.swing.JFrame {
                     .addComponent(txt_ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_Deletar)
-                .addGap(69, 69, 69))
+                .addGap(26, 26, 26)
+                .addComponent(btnVoltar)
+                .addGap(20, 20, 20))
         );
 
         pack();
@@ -211,6 +226,11 @@ public class TelaUsuarios extends javax.swing.JFrame {
  
     }//GEN-LAST:event_btnInserirActionPerformed
 
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+            new TelaDiretor(usuarioLogado).setVisible(true);
+            this.dispose();
+    }//GEN-LAST:event_btnVoltarActionPerformed
+
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -222,6 +242,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnInserir;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.JButton btn_Deletar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

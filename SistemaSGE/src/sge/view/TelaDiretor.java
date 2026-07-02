@@ -5,7 +5,8 @@ import sge.model.usuario;
 
 
 public class TelaDiretor extends javax.swing.JFrame {
-    private usuario usuarioLogado;
+    private sge.model.usuario usuarioLogado;
+   
     
     public TelaDiretor(usuario u) {
         this.usuarioLogado = u;
@@ -53,6 +54,11 @@ public class TelaDiretor extends javax.swing.JFrame {
         });
 
         btnAlunos.setText("Gestão de aluno");
+        btnAlunos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlunosActionPerformed(evt);
+            }
+        });
 
         btnNotas.setText("Lançamento de notas");
         btnNotas.addActionListener(new java.awt.event.ActionListener() {
@@ -121,11 +127,13 @@ public class TelaDiretor extends javax.swing.JFrame {
     private void btnTurmasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTurmasActionPerformed
             new TelaTurmas(usuarioLogado).setVisible(true);
             this.dispose();
-        ;
+        
     }//GEN-LAST:event_btnTurmasActionPerformed
 
     private void btnNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNotasActionPerformed
-        // TODO add your handling code here:
+            new TelaNotas(usuarioLogado).setVisible(true);
+            
+            this.dispose();
     }//GEN-LAST:event_btnNotasActionPerformed
 
     private void btnUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuariosActionPerformed
@@ -133,6 +141,11 @@ public class TelaDiretor extends javax.swing.JFrame {
         
         this.dispose();
     }//GEN-LAST:event_btnUsuariosActionPerformed
+
+    private void btnAlunosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlunosActionPerformed
+            new TelaAlunos(usuarioLogado).setVisible(true);
+            this.dispose();
+    }//GEN-LAST:event_btnAlunosActionPerformed
 
     /**
      * @param args the command line arguments
